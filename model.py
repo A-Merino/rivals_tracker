@@ -88,7 +88,6 @@ class Player:
             # the Character object with loaded data from the datafile object with same character name
             self.heroes[char] = stats.loadData(data['heroes'][char])
             # ^^ I think thats what this is doing
-            # ^^^ I hate that this is the only documentation so far lol
 
 
 class Hero:
@@ -103,6 +102,8 @@ class Hero:
         self.kos = 0
         self.time = 0
         self.assists = 0
+        self.mvps = 0
+        self.svps = 0
 
 
     def updateData(self, data):
@@ -114,6 +115,8 @@ class Hero:
         self.deaths += data['deaths']
         self.kos += data['kos']
         self.assists += data['assists']
+        self.mvps += data['mvps']
+        self.svps += data['svps']
         self.matches = self.match + data['matches']
 
 
@@ -126,6 +129,8 @@ class Hero:
         self.time = data['time']
         self.deaths = data['deaths']
         self.kos = data['kos']
+        self.mvps = data['mvps']
+        self.svps = data['svps']
         self.assists = data['assists']
         self.matches = data['matches']
 

@@ -39,9 +39,12 @@ def main():
             # get the match from the match history
             match_data = gd.getMatch(mid, header)
 
+            # for each player in the match
             for stats in match_data[mid]['players']:
-                 # if stats.keys()[0]
-                 pass
+                # Check if its one of us
+
+                # then add to olddata
+                pass
 
 
 

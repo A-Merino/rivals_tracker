@@ -52,16 +52,18 @@ class Player:
         self.matches = []
         self.maps = {}
 
+    def addMatch(self, match):
+        self.matches.append(match)
 
-    def updateHero(self, hero, data):
 
-        self.heroes[hero].updateData(data)
+    def updateHero(self, hero, data, match_id, damage=None):
+
+        self.heroes[hero].updateData(data, damage, match_id)
 
 
     def saveData(self):
         outfile = f'./data/players/{self.handle}.json'
         data = {}
-        data['name'] = self.name
         data['uid'] = self.uid
         data['handle'] = self.handle
         data['matches'] = self.matches
@@ -78,7 +80,6 @@ class Player:
 
     def loadData(self, data):
 
-        self.name = data["name"]
         self.uid = data["uid"]
         self.handle = data["handle"]
         self.matches = data['matches']
@@ -88,6 +89,13 @@ class Player:
             # the Character object with loaded data from the datafile object with same character name
             self.heroes[char] = stats.loadData(data['heroes'][char])
             # ^^ I think thats what this is doing
+
+
+    def collected(self, match_id):
+
+        if match_id in self.matches:
+            return True
+        return False
 
 
 class Hero:
@@ -104,20 +112,22 @@ class Hero:
         self.assists = 0
         self.mvps = 0
         self.svps = 0
+        self.matches = []
 
 
-    def updateData(self, data):
-        self.damage += data['damage']
-        self.heals += data['heals']
-        self.taken += data['taken']
-        self.final_hits += data['final_hits']
+    def updateData(self, data, match_id, damage):
+        if damage is not None:
+            self.damage += damage['damage']
+            self.heals += damage['heals']
+            self.taken += damage['taken']
         self.time += data['time']
         self.deaths += data['deaths']
         self.kos += data['kos']
         self.assists += data['assists']
-        self.mvps += data['mvps']
-        self.svps += data['svps']
-        self.matches = self.match + data['matches']
+        self.matches.append(match_id)
+        #self.final_hits += data['final_hits']
+        #self.mvps += data['mvps']
+        #self.svps += data['svps']
 
 
     def loadData(self, data):
@@ -125,14 +135,14 @@ class Hero:
         self.damage = data['damage']
         self.heals = data['heals']
         self.taken = data['taken']
-        self.final_hits = data['final_hits']
         self.time = data['time']
         self.deaths = data['deaths']
         self.kos = data['kos']
-        self.mvps = data['mvps']
-        self.svps = data['svps']
         self.assists = data['assists']
         self.matches = data['matches']
+        self.mvps = data['mvps']
+        self.svps = data['svps']
+        #self.final_hits = data['final_hits']
 
     def dictify(self):
         data = {}
@@ -140,11 +150,14 @@ class Hero:
         data['damage'] = self.damage
         data['heals'] = self.heals
         data['taken'] = self.taken
-        data['final_hits'] = self.final_hits
         data['time'] = self.time
         data['deaths'] = self.deaths
         data['kos'] = self.kos
         data['assists'] = self.assists
+        data['matches'] = self.matches
+        data['mvps'] = self.mvps
+        data['svps'] = self.svps
+        #data['final_hits'] = self.final_hits
         return data
 
 

@@ -25,3 +25,15 @@ def getHistory(player, header):
         return ps.parseHistory(response.json())
     else:
         print(f"Error {response.status_code}: {response.text}")
+
+
+
+def updateAccount(player, header):
+    # url = "https://marvelrivalsapi.com/api/v1/player/KingDerp_/update"
+
+    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v1/player", player, "update")), headers=header)
+
+    if response.status_code == 200:
+        print(response.json()['message'])
+    else:
+        print(f"Error {response.status_code}: {response.text}")

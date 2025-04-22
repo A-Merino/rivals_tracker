@@ -40,6 +40,35 @@ char_id = {
     1053: 'EmmaFrost'
 }
 
+def parseHistory(data):
+    '''
+        Given a match history query (Ex: test_history.json), parse all
+        the matches in the list and return as a list of matches
+    '''
+    data = data['match_history']
+    games = []
+    for match in data:
+        games.append(
+            {match['match_uid']: {
+
+                'map': match['match_map_id'],
+                'length': match['match_play_duration'],
+                'season': match['match_season'],
+                'winner': match['match_winner_side'],
+                'mvp': match['mvp_uid'],
+                'svp': match['svp_uid'],
+                'match_score': match['score_info'],
+                'team': match['match_player']['camp'],
+                'br': {
+                    'diff': match['match_player']['score_info']['add_score'],
+                    'rating': match['match_player']['score_info']['new_score']
+                },
+                'disconnected': match['match_player']['disconnected']
+            }
+            })
+
+    return games
+
 
 def parseMatch(data):
     '''
@@ -100,32 +129,13 @@ def parseMatch(data):
     return parsed
 
 
-def parseHistory(data):
-    '''
-        Given a match history query (Ex: test_history.json), parse all
-        the matches in the list and return as a list of matches
-    '''
-    data = data['match_history']
-    games = []
-    for match in data:
-        games.append(
-            {match['match_uid']: {
+def updatePlayer(player, stats, match_id):
+    player.addMatch(match_id)
+    stats = stats[list(stats.keys())[0]]
+    if len(stats['heroes']) == 1:
+        player.updateHero(hero['hero'], hero, match_id,{'damage':stats['total_damage'],'taken':stats['total_taken'],'heals':stats['total_heal']})
+    else:
+        for hero in stats['heroes']:
+            player.updateHero(hero['hero'], hero, match_id)
 
-                'map': match['match_map_id'],
-                'length': match['match_play_duration'],
-                'season': match['match_season'],
-                'winner': match['match_winner_side'],
-                'mvp': match['mvp_uid'],
-                'svp': match['svp_uid'],
-                'match_score': match['score_info'],
-                'team': match['match_player']['camp'],
-                'br': {
-                    'diff': match['match_player']['score_info']['add_score'],
-                    'rating': match['match_player']['score_info']['new_score']
-                },
-                'disconnected': match['match_player']['disconnected']
-            }
-            })
-
-    return games
-
+    return player

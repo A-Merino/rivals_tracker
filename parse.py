@@ -1,4 +1,5 @@
 char_id = {
+    0: None,
     1011: 'Hulk',
     1014: 'Punisher',
     1015: 'Storm',
@@ -7,7 +8,7 @@ char_id = {
     1018: 'DrStrange',
     1020: 'Mantis',
     1021: 'Hawkeye',
-    1022: 'CaptainAmerica'
+    1022: 'CaptainAmerica',
     1023: 'RocketRaccoon',
     1024: 'Hela',
     1025: 'CloakDagger',
@@ -36,7 +37,7 @@ char_id = {
     1050: 'InvisibleWoman',
     1051: 'TheThing',
     1052: 'IronFist',
-    1053: 'EmmaFrost',
+    1053: 'EmmaFrost'
 }
 
 
@@ -59,7 +60,8 @@ def parseMatch(data):
         }
     }
     
-    parsed[data['match_uid']'players'] = []
+    # create list for the players of the given match
+    parsed[data['match_uid']]['players'] = []
 
     for player in data['match_players']:
         parsed[data['match_uid']]['uids'].append(player['player_uid'])
@@ -115,10 +117,7 @@ def parseHistory(data):
                 'winner': match['match_winner_side'],
                 'mvp': match['mvp_uid'],
                 'svp': match['svp_uid'],
-                'match_score': {
-                    0: match['score_info']['0'],
-                    1: match['score_info']['1']
-                },
+                'match_score': match['score_info'],
                 'team': match['match_player']['camp'],
                 'br': {
                     'diff': match['match_player']['score_info']['add_score'],

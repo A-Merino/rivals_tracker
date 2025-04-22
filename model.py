@@ -73,11 +73,10 @@ class Player:
 
         with open(outfile, "w") as file:
             json.dump(data, file)
+            file.close()
 
 
-    def loadData(self, file):
-        with open(file, 'r') as f:
-            data = json.load(f)
+    def loadData(self, data):
 
         self.name = data["name"]
         self.uid = data["uid"]
@@ -85,7 +84,7 @@ class Player:
         self.matches = data['matches']
 
         for char, stats in zip(self.heroes.keys(), self.heroes.values()):
-            # The Player object's Character oject is equal to
+            # The Player object's Character object is equal to
             # the Character object with loaded data from the datafile object with same character name
             self.heroes[char] = stats.loadData(data['heroes'][char])
             # ^^ I think thats what this is doing

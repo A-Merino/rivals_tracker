@@ -1,46 +1,50 @@
 char_id = {
-    1000: 'Mantis',
-    1047: 'Jeff',
-    1000: 'AdamWarlock',
-    1025: 'CloakDagger',
-    1050: 'InvisibleWoman',
-    1000: 'Loki',
-    1031: 'LunaSnow',
-    1023: 'RocketRaccoon',
-    1000: 'Wolverine',
-    1000: 'WinterSoldier',
-    1014: 'Punisher',
-    1000: 'Storm',
-    1000: 'StarLord',
-    1000: 'SquirrelGirl',
-    1000: 'SpiderMan',
-    1000: 'ScarletWitch',
-    1000: 'Psylocke',
-    1045: 'Namor',
-    1030: 'MoonKnight',
-    1000: 'MisterFantastic',
-    1000: 'Magik',
-    1034: 'IronMan',
-    1000: 'IronFist',
-    1000: 'HumanTorch',
-    1000: 'Hela',
-    1000: 'Hawkeye',
-    1033: 'BlackWidow',
-    1000: 'BlackPanther',
-    1000: 'Venom',
-    1000: 'Thor',
-    1051: 'TheThing',
-    1000: 'PeniParker',
-    1000: 'Magneto',
     1011: 'Hulk',
-    1027: 'Groot',
-    1053: 'EmmaFrost',
+    1014: 'Punisher',
+    1015: 'Storm',
+    1016: 'Loki',
+    1017: 'HumanTorch',
     1018: 'DrStrange',
-    1000: 'CaptainAmerica'
+    1020: 'Mantis',
+    1021: 'Hawkeye',
+    1022: 'CaptainAmerica'
+    1023: 'RocketRaccoon',
+    1024: 'Hela',
+    1025: 'CloakDagger',
+    1026: 'BlackPanther',
+    1027: 'Groot',
+    1029: 'Magik',
+    1030: 'MoonKnight',
+    1031: 'LunaSnow',
+    1032: 'SquirrelGirl',
+    1033: 'BlackWidow',
+    1034: 'IronMan',
+    1035: 'Venom',
+    1036: 'SpiderMan',
+    1037: 'Magneto',
+    1038: 'ScarletWitch',
+    1039: 'Thor',
+    1040: 'MisterFantastic',
+    1041: 'WinterSoldier',
+    1042: 'PeniParker',
+    1043: 'StarLord',
+    1045: 'Namor',
+    1046: 'AdamWarlock',
+    1047: 'Jeff',
+    1048: 'Psylocke',
+    1049: 'Wolverine',
+    1050: 'InvisibleWoman',
+    1051: 'TheThing',
+    1052: 'IronFist',
+    1053: 'EmmaFrost',
 }
 
 
 def parseMatch(data):
+    '''
+        Given a dictionary/json format, parse out all the data in
+        a specific way and return the parsed dictionary
+    '''
     data = data['match_details']
     parsed = {
         data['match_uid']:{
@@ -95,6 +99,10 @@ def parseMatch(data):
 
 
 def parseHistory(data):
+    '''
+        Given a match history query (Ex: test_history.json), parse all
+        the matches in the list and return as a list of matches
+    '''
     data = data['match_history']
     games = []
     for match in data:

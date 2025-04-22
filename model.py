@@ -7,8 +7,7 @@ import numpy as np
 
 class Player:
 
-    def __init__(self, name=None, uid=None, user=None):
-        self.name = name
+    def __init__(self, uid=None, user=None):
         self.uid = uid
         self.handle = user
         self.heroes = { 'Mantis': Mantis(),
@@ -65,6 +64,7 @@ class Player:
         data['name'] = self.name
         data['uid'] = self.uid
         data['handle'] = self.handle
+        data['matches'] = self.matches
 
         data['heroes'] = {}
 
@@ -82,6 +82,7 @@ class Player:
         self.name = data["name"]
         self.uid = data["uid"]
         self.handle = data["handle"]
+        self.matches = data['matches']
 
         for char, stats in zip(self.heroes.keys(), self.heroes.values()):
             # The Player object's Character oject is equal to

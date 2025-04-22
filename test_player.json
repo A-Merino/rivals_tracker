@@ -1,0 +1,128 @@
+{"uid": 283485673, "name": "KingDerp_", "updates": {"info_update_time": "2/2/2025, 10:50:19 AM", "last_history_update": "4/15/2025, 2:37:48 PM", "last_inserted_match": "4/15/2025, 12:37:08 AM", "last_update_request": "4/15/2025, 2:37:46 PM"}
+, "player": {"uid": 283485673, "level": "51", "name": "KingDerp_", "icon": {"player_icon_id": "31020202", "player_icon": "/players/heads/player_head_31020202.png"}
+, "rank": {"rank": "Bronze III", "image": "/ranked/bronze.png", "color": "#A7693F"}
+, "info": {"completed_achievements": "96", "login_os": "PC", "rank_game_season": {"1001001": {"rank_game_id": 1, "level": 1, "rank_score": 3000, "max_level": 1, "max_rank_score": 3000, "update_time": 1734310163, "win_count": 0, "protect_score": 1, "diff_score": 0}
+, "1001002": {"rank_game_id": 2, "level": 4, "rank_score": 3310.758388684928, "max_level": 4, "max_rank_score": 3310.758388684928, "update_time": 1738529814, "win_count": 6, "protect_score": 0, "diff_score": -11.610195070757982}
+, "1001003": {"rank_game_id": 3, "level": 4, "rank_score": 3310.758388684928, "max_level": 4, "max_rank_score": 3310.758388684928, "update_time": 1740173561, "win_count": 0, "protect_score": 0, "diff_score": 0}
+, "1001004": {"rank_game_id": 4, "level": 1, "rank_score": 3000, "max_level": 1, "max_rank_score": 3000, "update_time": 1744589871, "win_count": 0, "protect_score": 0, "diff_score": 0}
+}
+}
+}
+, "isPrivate": false, "overall_stats": {"total_matches": 31, "total_wins": 18, "unranked": {"total_matches": 31, "total_wins": 18, "total_assists": 359, "total_deaths": 149, "total_kills": 385, "total_time_played": "4h 54m 34s", "total_time_played_raw": 17674.691836357117, "total_mvp": 5, "total_svp": 4}
+, "ranked": {"total_matches": 0, "total_wins": 0, "total_assists": 0, "total_deaths": 0, "total_kills": 0, "total_time_played": "0m 0s", "total_time_played_raw": 0, "total_mvp": 0, "total_svp": 0}
+}
+, "match_history": [{"match_uid": "5519265_1744691828_1148184_11001_11", "map_id": 1148, "map_thumbnail": "/rivals/maps/map_1148.png", "duration": 629.6279518604279, "season": 3, "winner_side": 1, "mvp_uid": 172351051, "svp_uid": 1495151732, "match_time_stamp": 1744692547, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1014, "hero_name": "the punisher", "hero_type": "/heroes/transformations/the-punisher-headbig-0.webp", "kills": 18, "deaths": 8, "assists": 1, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 27.4611113048918, "level": 1, "new_level": 1, "new_score": 3449.908221302499}
+}
+, {"match_uid": "5518939_1744691241_1235260_11001_11", "map_id": 1235, "map_thumbnail": "/rivals/maps/map_1235.png", "duration": 384.23560190200806, "season": 3, "winner_side": 0, "mvp_uid": 172351051, "svp_uid": 1911109105, "match_time_stamp": 1744691786, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 0}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 8, "deaths": 1, "assists": 18, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 0, "score_change": 29.109567658360902, "level": 1, "new_level": 1, "new_score": 3422.447109997607}
+}
+, {"match_uid": "5518321_1744690435_1217456_11001_11", "map_id": 1217, "map_thumbnail": "/rivals/maps/map_1217.png", "duration": 669.8672478199005, "season": 3, "winner_side": 0, "mvp_uid": 2042441228, "svp_uid": 172351051, "match_time_stamp": 1744691192, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1032, "hero_name": "squirrel girl", "hero_type": "/heroes/transformations/squirrel-girl-headbig-0.webp", "kills": 11, "deaths": 8, "assists": 2, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -39.61355282358636, "level": 1, "new_level": 1, "new_score": 3393.3375423392463}
+}
+, {"match_uid": "5518594_1744689562_1170379_11001_11", "map_id": 1170, "map_thumbnail": "/rivals/maps/map_1170.png", "duration": 617.3592991828918, "season": 3, "winner_side": 1, "mvp_uid": 283485673, "svp_uid": 1472870386, "match_time_stamp": 1744690335, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 0, "1": 2}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 10, "deaths": 3, "assists": 17, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 36.50642519618668, "level": 1, "new_level": 1, "new_score": 3432.9510951628326}
+}
+, {"match_uid": "5514682_1744688355_1309248_11001_12", "map_id": 1309, "map_thumbnail": "/rivals/maps/map_1309.png", "duration": 666.8510818481445, "season": 3, "winner_side": 0, "mvp_uid": 1096017438, "svp_uid": 172351051, "match_time_stamp": 1744689238, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 1}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1014, "hero_name": "the punisher", "hero_type": "/heroes/transformations/the-punisher-headbig-0.webp", "kills": 14, "deaths": 9, "assists": 1, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -39.99707296623728, "level": 1, "new_level": 1, "new_score": 3396.444669966646}
+}
+, {"match_uid": "5519326_1744687666_1101141_11001_11", "map_id": 1101, "map_thumbnail": "/rivals/maps/map_1101.png", "duration": 487.10894894599915, "season": 3, "winner_side": 0, "mvp_uid": 1029148902, "svp_uid": 172351051, "match_time_stamp": 1744688241, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1027, "hero_name": "groot", "hero_type": "/heroes/transformations/groot-headbig-0.webp", "kills": 11, "deaths": 6, "assists": 0, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -39.75132961265763, "level": 1, "new_level": 1, "new_score": 3436.4417429328832}
+}
+, {"match_uid": "5515235_1744686396_1287130_11001_12", "map_id": 1287, "map_thumbnail": "/rivals/maps/map_1287.png", "duration": 850.1032688617706, "season": 3, "winner_side": 0, "mvp_uid": 1005662484, "svp_uid": 313218427, "match_time_stamp": 1744687464, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 1}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 14, "deaths": 5, "assists": 22, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -29.996475359677333, "level": 1, "new_level": 1, "new_score": 3476.193072545541}
+}
+, {"match_uid": "5519334_1744685738_1240108_11001_11", "map_id": 1240, "map_thumbnail": "/rivals/maps/map_1240.png", "duration": 480.0267159938812, "season": 3, "winner_side": 1, "mvp_uid": 172351051, "svp_uid": 379362107, "match_time_stamp": 1744686306, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1032, "hero_name": "squirrel girl", "hero_type": "/heroes/transformations/squirrel-girl-headbig-0.webp", "kills": 20, "deaths": 2, "assists": 0, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 33.55219428877217, "level": 1, "new_level": 1, "new_score": 3506.189547905218}
+}
+, {"match_uid": "5518698_1744684424_1170273_11001_11", "map_id": 1170, "map_thumbnail": "/rivals/maps/map_1170.png", "duration": 403.8661870956421, "season": 3, "winner_side": 0, "mvp_uid": 283485673, "svp_uid": 331678946, "match_time_stamp": 1744684985, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 0}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 10, "deaths": 2, "assists": 9, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 0, "score_change": 47.027120731574996, "level": 1, "new_level": 1, "new_score": 3472.637353616446}
+}
+, {"match_uid": "5518262_1744683645_1032456_11001_11", "map_id": 1032, "map_thumbnail": "/rivals/maps/map_1032.png", "duration": 644.616893529892, "season": 3, "winner_side": 1, "mvp_uid": 1631900285, "svp_uid": 357698513, "match_time_stamp": 1744684377, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 9, "deaths": 3, "assists": 22, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 0, "score_change": -32.57686950368816, "level": 1, "new_level": 1, "new_score": 3425.610232884871}
+}
+, {"match_uid": "5519350_1744682447_1287039_11001_11", "map_id": 1287, "map_thumbnail": "/rivals/maps/map_1287.png", "duration": 819.8659775257111, "season": 3, "winner_side": 1, "mvp_uid": 283485673, "svp_uid": 1208859375, "match_time_stamp": 1744683484, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 1, "1": 2}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 15, "deaths": 5, "assists": 24, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 35.487702158715365, "level": 1, "new_level": 1, "new_score": 3458.187102388559}
+}
+, {"match_uid": "5518665_1744682025_1217211_11001_11", "map_id": 1217, "map_thumbnail": "/rivals/maps/map_1217.png", "duration": 300.01365303993225, "season": 3, "winner_side": 1, "mvp_uid": 2057199778, "svp_uid": 157247856, "match_time_stamp": 1744682416, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1053, "hero_name": "emma frost", "hero_type": "/heroes/transformations/emma-frost-headbig-0.webp", "kills": 6, "deaths": 4, "assists": 1, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 0, "score_change": -37.171029333787374, "level": 1, "new_level": 1, "new_score": 3422.699400229844}
+}
+, {"match_uid": "5521388_1744681371_1201011_11001_11", "map_id": 1201, "map_thumbnail": "/rivals/maps/map_1201.png", "duration": 521.7743377685547, "season": 3, "winner_side": 0, "mvp_uid": 1686775904, "svp_uid": 283485673, "match_time_stamp": 1744681982, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 11, "deaths": 4, "assists": 7, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -11.642938357735147, "level": 1, "new_level": 1, "new_score": 3459.870429563631}
+}
+, {"match_uid": "5518493_1744680620_1240315_11001_11", "map_id": 1240, "map_thumbnail": "/rivals/maps/map_1240.png", "duration": 624.8260798454285, "season": 3, "winner_side": 1, "mvp_uid": 1170112849, "svp_uid": 1892670614, "match_time_stamp": 1744681331, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1021, "hero_name": "hawkeye", "hero_type": "/heroes/transformations/hawkeye-headbig-0.webp", "kills": 21, "deaths": 9, "assists": 3, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 27.38852035245418, "level": 1, "new_level": 1, "new_score": 3471.5133679213664}
+}
+, {"match_uid": "5521404_1744606556_1170219_11001_11", "map_id": 1170, "map_thumbnail": "/rivals/maps/map_1170.png", "duration": 516.8374373912811, "season": 3, "winner_side": 0, "mvp_uid": 925305726, "svp_uid": 1166983163, "match_time_stamp": 1744607229, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 0}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 8, "deaths": 4, "assists": 18, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 0, "score_change": 28.767496615650543, "level": 1, "new_level": 1, "new_score": 3444.124847568912}
+}
+, {"match_uid": "5518297_1744605785_1217568_11001_11", "map_id": 1217, "map_thumbnail": "/rivals/maps/map_1217.png", "duration": 614.4822070598602, "season": 3, "winner_side": 0, "mvp_uid": 172351051, "svp_uid": 2004633788, "match_time_stamp": 1744606488, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1032, "hero_name": "squirrel girl", "hero_type": "/heroes/transformations/squirrel-girl-headbig-0.webp", "kills": 15, "deaths": 9, "assists": 5, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 0, "score_change": 26.804900737787193, "level": 1, "new_level": 1, "new_score": 3415.3573509532616}
+}
+, {"match_uid": "5514490_1744604395_1287515_11001_12", "map_id": 1287, "map_thumbnail": "/rivals/maps/map_1287.png", "duration": 964.6392805576324, "season": 3, "winner_side": 0, "mvp_uid": 356739958, "svp_uid": 283485673, "match_time_stamp": 1744605578, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 2, "1": 1}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 19, "deaths": 10, "assists": 22, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 1, "score_change": -19.457432889582833, "level": 1, "new_level": 1, "new_score": 3388.5524502154744}
+}
+, {"match_uid": "5518489_1744602485_1240651_11001_11", "map_id": 1240, "map_thumbnail": "/rivals/maps/map_1240.png", "duration": 554.964188337326, "season": 3, "winner_side": 0, "mvp_uid": 172351051, "svp_uid": 126554304, "match_time_stamp": 1744603126, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1027, "hero_name": "groot", "hero_type": "/heroes/transformations/groot-headbig-0.webp", "kills": 12, "deaths": 4, "assists": 1, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 0, "score_change": 24.57627630818297, "level": 1, "new_level": 1, "new_score": 3408.0098831050573}
+}
+, {"match_uid": "5518595_1744601885_1148509_11001_11", "map_id": 1148, "map_thumbnail": "/rivals/maps/map_1148.png", "duration": 480.011839389801, "season": 3, "winner_side": 1, "mvp_uid": 1048631099, "svp_uid": 172351051, "match_time_stamp": 1744602453, "play_mode_id": 0, "game_mode_id": 1, "score_info": null, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 9, "deaths": 2, "assists": 20, "is_win": {"score": 0, "is_win": false}
+, "disconnected": false, "camp": 0, "score_change": -25.290857292568035, "level": 1, "new_level": 1, "new_score": 3383.4336067968743}
+}
+, {"match_uid": "5513567_1744601182_1309521_11001_12", "map_id": 1309, "map_thumbnail": "/rivals/maps/map_1309.png", "duration": 416.0513381958008, "season": 3, "winner_side": 1, "mvp_uid": 283485673, "svp_uid": 1004614217, "match_time_stamp": 1744601754, "play_mode_id": 0, "game_mode_id": 1, "score_info": {"0": 0, "1": 2}
+, "player_performance": {"player_uid": 283485673, "hero_id": 1047, "hero_name": "jeff the land shark", "hero_type": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "kills": 10, "deaths": 1, "assists": 13, "is_win": {"score": 1, "is_win": true}
+, "disconnected": false, "camp": 1, "score_change": 33.33719937632577, "level": 1, "new_level": 1, "new_score": 3408.7244640894423}
+}
+], "rank_history": [], "hero_matchups": [], "team_mates": [{"player_info": {"nick_name": "dtyser", "player_icon": "/rivals/players/heads/player_head_31031202.png", "player_uid": 172351051}
+, "matches": 29, "wins": 17, "win_rate": "58.62"}
+, {"player_info": {"nick_name": "hunterb12", "player_icon": "/rivals/players/heads/player_head_30000026.png", "player_uid": 1139596293}
+, "matches": 15, "wins": 9, "win_rate": "60.00"}
+, {"player_info": {"nick_name": "PRicanMariachi", "player_icon": "/rivals/players/heads/player_head_30000026.png", "player_uid": 1258827257}
+, "matches": 13, "wins": 6, "win_rate": "46.15"}
+, {"player_info": {"nick_name": "SockboiGamer", "player_icon": "/rivals/players/heads/player_head_31036205.png", "player_uid": 2136421725}
+, "matches": 11, "wins": 7, "win_rate": "63.64"}
+, {"player_info": {"nick_name": "AutismGirlSwag", "player_icon": "/rivals/players/heads/player_head_30000031.png", "player_uid": 335128978}
+, "matches": 1, "wins": 1, "win_rate": "100.00"}
+, {"player_info": {"nick_name": "Vixenp_", "player_icon": "/rivals/players/heads/player_head_31038204.png", "player_uid": 676969985}
+, "matches": 1, "wins": 1, "win_rate": "100.00"}
+, {"player_info": {"nick_name": "NullByte11", "player_icon": "/rivals/players/heads/player_head_31036205.png", "player_uid": 255823491}
+, "matches": 1, "wins": 1, "win_rate": "100.00"}
+, {"player_info": {"nick_name": "Draphobic", "player_icon": "/rivals/players/heads/player_head_31050201.png", "player_uid": 1884218726}
+, "matches": 1, "wins": 0, "win_rate": "0.00"}
+, {"player_info": {"nick_name": "Kongolx", "player_icon": "/rivals/players/heads/player_head_31037202.png", "player_uid": 14160267}
+, "matches": 1, "wins": 0, "win_rate": "0.00"}
+, {"player_info": {"nick_name": "DirtyBurger__", "player_icon": "/rivals/players/heads/player_head_31049203.png", "player_uid": 894157914}
+, "matches": 1, "wins": 0, "win_rate": "0.00"}
+], "heroes_ranked": [], "heroes_unranked": [{"hero_id": 1014, "hero_name": "the punisher", "hero_thumbnail": "/heroes/transformations/the-punisher-headbig-0.webp", "matches": 2, "wins": 1, "mvp": 0, "svp": 0, "kills": 14, "deaths": 12, "assists": 0, "play_time": 831.8387897051871, "damage": 11501.373362541199, "heal": 0, "damage_taken": 13256.476638317108, "main_attack": {"total": 1829, "hits": 243}
+}
+, {"hero_id": 1020, "hero_name": "mantis", "hero_thumbnail": "/heroes/transformations/mantis-headbig-0.webp", "matches": 1, "wins": 1, "mvp": 0, "svp": 0, "kills": 7, "deaths": 2, "assists": 27, "play_time": 369.8589780796319, "damage": 2130.4036407470703, "heal": 7480.986862182617, "damage_taken": 3440.0335822105408, "main_attack": {"total": 221, "hits": 42}
+}
+, {"hero_id": 1021, "hero_name": "hawkeye", "hero_thumbnail": "/heroes/transformations/hawkeye-headbig-0.webp", "matches": 2, "wins": 2, "mvp": 0, "svp": 0, "kills": 26, "deaths": 11, "assists": 7, "play_time": 955.1483200229704, "damage": 18632.301825523376, "heal": 0, "damage_taken": 11895.663428783417, "main_attack": {"total": 385, "hits": 122}
+}
+, {"hero_id": 1027, "hero_name": "groot", "hero_thumbnail": "/heroes/transformations/groot-headbig-0.webp", "matches": 4, "wins": 2, "mvp": 0, "svp": 1, "kills": 76, "deaths": 25, "assists": 7, "play_time": 2606.024544240907, "damage": 42793.923018455505, "heal": 0, "damage_taken": 131013.18217590451, "main_attack": {"total": 949, "hits": 291}
+}
+, {"hero_id": 1032, "hero_name": "squirrel girl", "hero_thumbnail": "/heroes/transformations/squirrel-girl-headbig-0.webp", "matches": 3, "wins": 2, "mvp": 0, "svp": 0, "kills": 43, "deaths": 12, "assists": 6, "play_time": 1951.3350495714694, "damage": 37933.24495124817, "heal": 0, "damage_taken": 11937.880385637283, "main_attack": {"total": 1305, "hits": 291}
+}
+, {"hero_id": 1047, "hero_name": "jeff the land shark", "hero_thumbnail": "/heroes/transformations/jeff-the-land-shark-headbig-0.webp", "matches": 17, "wins": 10, "mvp": 5, "svp": 3, "kills": 169, "deaths": 59, "assists": 305, "play_time": 9820.432100882754, "damage": 89939.38235569, "heal": 238559.959918499, "damage_taken": 86657.02321708202, "main_attack": {"total": 3943, "hits": 1650}
+}
+, {"hero_id": 1053, "hero_name": "emma frost", "hero_thumbnail": "/heroes/transformations/emma-frost-headbig-0.webp", "matches": 2, "wins": 0, "mvp": 0, "svp": 0, "kills": 15, "deaths": 10, "assists": 1, "play_time": 1139.8508317992091, "damage": 18183.047753572464, "heal": 0, "damage_taken": 43034.705738186836, "main_attack": {"total": 4062, "hits": 1198}
+}
+], "maps": [{"map_id": 1032, "map_thumbnail": "/rivals/maps/map_1032.png", "matches": 2, "wins": 0, "kills": 18, "deaths": 9, "assists": 22, "play_time": 1307.9835447128862}
+    , {"map_id": 1034, "map_thumbnail": "/rivals/maps/map_1034.png", "matches": 1, "wins": 1, "kills": 28, "deaths": 8, "assists": 3, "play_time": 725.2383006997406}
+, {"map_id": 1101, "map_thumbnail": "/rivals/maps/map_1101.png", "matches": 2, "wins": 1, "kills": 15, "deaths": 10, "assists": 15, "play_time": 985.5130701791495}
+, {"map_id": 1148, "map_thumbnail": "/rivals/maps/map_1148.png", "matches": 3, "wins": 1, "kills": 54, "deaths": 20, "assists": 25, "play_time": 1729.047657981515}
+, {"map_id": 1170, "map_thumbnail": "/rivals/maps/map_1170.png", "matches": 4, "wins": 4, "kills": 35, "deaths": 11, "assists": 71, "play_time": 1907.8917890135199}
+, {"map_id": 1201, "map_thumbnail": "/rivals/maps/map_1201.png", "matches": 2, "wins": 0, "kills": 12, "deaths": 7, "assists": 21, "play_time": 1025.7835480142385}
+, {"map_id": 1217, "map_thumbnail": "/rivals/maps/map_1217.png", "matches": 3, "wins": 1, "kills": 32, "deaths": 21, "assists": 8, "play_time": 1584.3438296262175}
+, {"map_id": 1235, "map_thumbnail": "/rivals/maps/map_1235.png", "matches": 3, "wins": 3, "kills": 34, "deaths": 9, "assists": 40, "play_time": 1212.9003346972167}
+, {"map_id": 1240, "map_thumbnail": "/rivals/maps/map_1240.png", "matches": 4, "wins": 4, "kills": 63, "deaths": 16, "assists": 21, "play_time": 1967.4299157746136}
+, {"map_id": 1287, "map_thumbnail": "/rivals/maps/map_1287.png", "matches": 5, "wins": 2, "kills": 70, "deaths": 28, "assists": 119, "play_time": 4145.4724520891905}
+, {"map_id": 1309, "map_thumbnail": "/rivals/maps/map_1309.png", "matches": 2, "wins": 1, "kills": 24, "deaths": 10, "assists": 14, "play_time": 1082.8841715138406}
+]}

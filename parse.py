@@ -133,9 +133,9 @@ def updatePlayer(player, stats, match_id):
     player.addMatch(match_id)
     stats = stats[list(stats.keys())[0]]
     if len(stats['heroes']) == 1:
-        player.updateHero(hero['hero'], hero, match_id,{'damage':stats['total_damage'],'taken':stats['total_taken'],'heals':stats['total_heal']})
+        player.updateHero(stats['heroes'][0]['hero'], stats['heroes'][0], match_id,{'damage':stats['total_damage'],'taken':stats['total_taken'],'heals':stats['total_heal']})
     else:
         for hero in stats['heroes']:
             player.updateHero(hero['hero'], hero, match_id)
 
-    return player
+    # return player

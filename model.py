@@ -55,10 +55,16 @@ class Player:
     def addMatch(self, match):
         self.matches.append(match)
 
+    def checkMatch(self, match_id):
+        if match_id in self.matches:
+            return True
+        return False
+
+
 
     def updateHero(self, hero, data, match_id, damage=None):
 
-        self.heroes[hero].updateData(data, damage, match_id)
+        self.heroes[hero].updateData(data, match_id, damage)
 
 
     def saveData(self):
@@ -89,6 +95,10 @@ class Player:
             # the Character object with loaded data from the datafile object with same character name
             self.heroes[char] = stats.loadData(data['heroes'][char])
             # ^^ I think thats what this is doing
+
+        # Why do I have to return self when I'm updating data
+        # I guess its because It has the new data?  
+        return self
 
 
     def collected(self, match_id):
@@ -143,6 +153,8 @@ class Hero:
         self.mvps = data['mvps']
         self.svps = data['svps']
         #self.final_hits = data['final_hits']
+
+        return self
 
     def dictify(self):
         data = {}

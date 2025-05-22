@@ -41,6 +41,7 @@ def get_our_info():
 def load_info():
     files = glob('./data/players/*')
 
+
     if len(files) == 0:
         return None
 
@@ -75,14 +76,20 @@ def isAMatch(match_id):
         return True
     return False
 
+
 def getPlayer(line, uid):
-    for i, p in enumerate(line):
+    for p in line:
+        
         if uid == p.uid:
-            return p, i
+            return p
     raise "Error: ID is not in list, which should not be possible" 
+
 
 def save_data(players):
     for player in players:
        player.saveData() 
 
+
+def get_all_matches():
+    return glob('./data/matches/*')
 

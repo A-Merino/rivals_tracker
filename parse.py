@@ -104,8 +104,8 @@ def parseMatch(data):
             'deaths': player['deaths'],
             'assists': player['assists'],
             'total_damage': player['total_hero_damage'],
-            'total_taken': player['total_hero_heal'],
-            'total_heal': player['total_damage_taken']
+            'total_taken': player['total_hero_taken'],
+            'total_heal': player['total_damage_heal']
             }
         }
 

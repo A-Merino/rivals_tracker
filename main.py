@@ -5,6 +5,7 @@ import grabData as gd
 import parse as ps
 import json
 import time
+import datetime
 
 def main():
 
@@ -56,7 +57,7 @@ def main():
             minutes after completion to account for this and give some leeway
         '''
         gd.updateAccount(player['uid'], header)
-
+    loader()
 
 
 
@@ -69,10 +70,9 @@ def test():
     for i in range(9):
         i = 0
         print(i)
-
+    print(datetime.datetime.fromtimestamp(1745256307))
 
 test()
-# main()
 
 
 
@@ -112,7 +112,6 @@ def loader():
             
             # Check if its one of us
             if cur_id in uids:
-                print(f"Matching uid: {cur_id}")
                 # if so then get the player model
                 cur_player = utils.getPlayer(old_data, cur_id)
                 # update
@@ -122,4 +121,5 @@ def loader():
     utils.save_data(old_data)
 
 
+# main()
 # loader()

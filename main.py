@@ -44,8 +44,9 @@ def main():
             # get the match from the match history
             match_data = gd.getMatch(mid, header)
 
-            # Save the match data to file
-            utils.save_match(match_data)
+            # Save the match data to file if its a normal mode
+            if match_data != 0:
+                utils.save_match(match_data)
 
             
         # After we get data then we update the player
@@ -63,16 +64,14 @@ def main():
 
 def test():    
     # print(gd.getHistory("172351051",utils.get_key()))
-    print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
+    # print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
     #gd.updateAccount("1139596293", utils.get_key())
-    d = {'get':2}
-    print(list(d.keys())[0])
-    for i in range(9):
-        i = 0
-        print(i)
-    print(datetime.datetime.fromtimestamp(1745256307))
 
-# test()
+    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", "KingDerp_", "match-history?timestamp=0")), headers=utils.get_key())
+    print(response.json())
+
+
+test()
 
 
 
@@ -121,5 +120,5 @@ def loader():
     utils.save_data(old_data)
 
 
-main()
+# main()
 # loader()

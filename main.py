@@ -63,7 +63,7 @@ def main():
 
 def test():    
     # print(gd.getHistory("172351051",utils.get_key()))
-    #print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
+    print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
     #gd.updateAccount("1139596293", utils.get_key())
     d = {'get':2}
     print(list(d.keys())[0])
@@ -72,7 +72,7 @@ def test():
         print(i)
     print(datetime.datetime.fromtimestamp(1745256307))
 
-test()
+# test()
 
 
 
@@ -121,5 +121,5 @@ def loader():
     utils.save_data(old_data)
 
 
-# main()
+main()
 # loader()

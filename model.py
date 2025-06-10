@@ -47,7 +47,8 @@ class Player:
                         'Groot': Groot(),
                         'EmmaFrost': EmmaFrost(),
                         'DrStrange': DrStrange(),
-                        'CaptainAmerica': CaptainAmerica()
+                        'CaptainAmerica': CaptainAmerica(),
+                        'Ultron': Ultron()
                         }
         self.matches = []
         self.maps = {}
@@ -222,6 +223,13 @@ class Loki(Hero):
     def _init__(self):
         super().__init__("Loki")
         self.name = "Loki"
+        self.type = "Support"
+
+class Ultron(Hero):
+
+    def _init__(self):
+        super().__init__("Ultron")
+        self.name = "Ultron"
         self.type = "Support"
 
 class LunaSnow(Hero):

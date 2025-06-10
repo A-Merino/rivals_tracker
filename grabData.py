@@ -16,10 +16,12 @@ def getMatch(match_id, header):
         print(f"Error {response.status_code}: {response.text}")
 
 
-def getHistory(player, header):
+def getHistory(player, header, season='0', timestamp='0'):
     # url = "https://marvelrivalsapi.com/api/v1/player/KingDerp_/match-history"
 
-    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v1/player", player, "match-history")), headers=header)
+    params = ""
+
+    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", player, "match-history")), headers=header)
 
     if response.status_code == 200:
         return ps.parseHistory(response.json())

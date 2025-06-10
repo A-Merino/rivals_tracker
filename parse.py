@@ -14,6 +14,7 @@ char_id = {
     1025: 'CloakDagger',
     1026: 'BlackPanther',
     1027: 'Groot',
+    1028: 'Ultron',
     1029: 'Magik',
     1030: 'MoonKnight',
     1031: 'LunaSnow',
@@ -104,8 +105,8 @@ def parseMatch(data):
             'deaths': player['deaths'],
             'assists': player['assists'],
             'total_damage': player['total_hero_damage'],
-            'total_taken': player['total_hero_taken'],
-            'total_heal': player['total_damage_heal']
+            'total_taken': player['total_damage_taken'],
+            'total_heal': player['total_hero_heal']
             }
         }
 

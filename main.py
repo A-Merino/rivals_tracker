@@ -29,25 +29,7 @@ def main():
 
         # Start with match history
         matches = gd.getHistory(player['uid'], header)
-        
-        for match in matches:
-            # there is only one key in match variables
-            mid = list(match.keys())[0]
-            
-            # check if the match is already collected
-            if utils.isAMatch(mid):
-                print('Already Collected')
-                continue  # Skip
-            
-            # if not...
-
-            # get the match from the match history
-            match_data = gd.getMatch(mid, header)
-
-            # Save the match data to file if its a normal mode
-            if match_data != 0:
-                utils.save_match(match_data)
-
+        saver(matches)
             
         # After we get data then we update the player
 
@@ -61,17 +43,81 @@ def main():
     loader()
 
 
+def getAll():
+        # get our key and set header for api calls
+    header = utils.get_key()
+
+    # get uids and handles
+    us = utils.get_our_info()
+
+    uids = utils.list_uids(us)
+
+    # Get already saved data
+    old_data = utils.load_info()
+    
+    seasons = ['0', '1.0', '1.5', '2.0', '2.5']
+
+    # if no files, then init new models
+    if old_data is None:
+        old_data = utils.init_players(us)
+    
+    # go through each of us and collect data
+    for player in us:
+
+        for season in seasons:
+
+            matches, pages = gd.getHistory(player['uid'], header, True, season, '1', True)
+            saver(matches)
+            # Start with match history
+            for p in range(2, pages+1):
+                matches = gd.getHistory(player['uid'], header, True, season, str(p))
+                saver(matches)
+
+            
+        # After we get data then we update the player
+
+        '''
+            There is a 30 minute lock after updating the player so
+            we call this after grabbing the data so we do not get
+            stuck in a 'data loop' we will call this program every 32
+            minutes after completion to account for this and give some leeway
+        '''
+        gd.updateAccount(player['uid'], header)
+
+
+def saver(matches):
+    for match in matches:
+        # there is only one key in match variables
+        mid = list(match.keys())[0]
+        
+        # check if the match is already collected
+        if utils.isAMatch(mid):
+            print('Already Collected')
+            continue  # Skip
+        
+        # if not...
+
+        # get the match from the match history
+        match_data = gd.getMatch(mid, utils.get_key())
+
+        # Save the match data to file if its a normal mode
+        if match_data != 0:
+            utils.save_match(match_data)
+    loader()
+            
+
+
 
 def test():    
     # print(gd.getHistory("172351051",utils.get_key()))
     # print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
     #gd.updateAccount("1139596293", utils.get_key())
 
-    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", "KingDerp_", "match-history?timestamp=0")), headers=utils.get_key())
-    print(response.json())
+    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", "KingDerp_", "match-history?season=0&page=2")), headers=utils.get_key())
+    print(response.json()['pagination'])
 
 
-test()
+# test()
 
 
 
@@ -119,6 +165,6 @@ def loader():
 
     utils.save_data(old_data)
 
-
+getAll()
 # main()
 # loader()

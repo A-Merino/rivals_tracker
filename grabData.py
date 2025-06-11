@@ -22,7 +22,7 @@ def getMatch(match_id, header):
         return ps.parseMatch(response.json())
     else:
         # if error print
-        print(f"Error {response.status_code}: {response.text}")
+        print(f"Error {response.status_code}")
         
         # if rate limit error
         if response.status_code == 429:
@@ -31,32 +31,53 @@ def getMatch(match_id, header):
             time.sleep(60)
             print(f"Retrying match {match_id}")
             return getMatch(match_id, header)
+        elif response.status_code == 504:
+            print('Server error')
+            time.sleep(60)
+            print(f"Retrying match {match_id}")
+            return getMatch(match_id, header)
 
 
-def getHistory(player, header, season='0', timestamp='0'):
+
+def getHistory(player, header, mod=False, season='0', page='1', retTotal=False):
 
     # Example
     # url = "https://marvelrivalsapi.com/api/v1/player/KingDerp_/match-history"
 
-    # Certain parameter modifying here
-    params = ""
+    # Create url
+    url= '/'.join(("https://marvelrivalsapi.com/api/v2/player", player, "match-history"))
 
+    # Certain parameter modifying here
+    params = f"?season={season}&page={page}"
+    
+    if mod:
+        url += params
+    
     # Create request url and save response
-    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", player, "match-history")), headers=header)
+    response = requests.get(url, headers=header)
 
     # All good, parse it
     if response.status_code == 200:
+        if retTotal:
+            return ps.parseHistory(response.json()), response.json()['pagination']['total_pages']
+
         return ps.parseHistory(response.json())
     else:
         # If not print error
-        print(f"Error {response.status_code}: {response.text}")
+        print(f"Error {response.status_code}")
         # If it is a rate limit error
         if response.status_code == 429:
             # wait one minute and try again
             print("Cooling rate limit")
             time.sleep(60)
             print(f"Retrying history of {player}")
-            return getHistory(player, header)  # Recursion!!!
+            return getHistory(player, header, retTotal)  # Recursion!!!
+        elif response.status_code == 504:
+            print('Server error')
+            time.sleep(60)
+            print(f"Retrying history of {player}")
+            return getHistory(player, header, retTotal)  # Recursion!!!
+
 
 
 

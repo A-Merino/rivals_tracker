@@ -1,45 +1,4 @@
-char_id = {
-    0: None,
-    1011: 'Hulk',
-    1014: 'Punisher',
-    1015: 'Storm',
-    1016: 'Loki',
-    1017: 'HumanTorch',
-    1018: 'DrStrange',
-    1020: 'Mantis',
-    1021: 'Hawkeye',
-    1022: 'CaptainAmerica',
-    1023: 'RocketRaccoon',
-    1024: 'Hela',
-    1025: 'CloakDagger',
-    1026: 'BlackPanther',
-    1027: 'Groot',
-    1028: 'Ultron',
-    1029: 'Magik',
-    1030: 'MoonKnight',
-    1031: 'LunaSnow',
-    1032: 'SquirrelGirl',
-    1033: 'BlackWidow',
-    1034: 'IronMan',
-    1035: 'Venom',
-    1036: 'SpiderMan',
-    1037: 'Magneto',
-    1038: 'ScarletWitch',
-    1039: 'Thor',
-    1040: 'MisterFantastic',
-    1041: 'WinterSoldier',
-    1042: 'PeniParker',
-    1043: 'StarLord',
-    1045: 'Namor',
-    1046: 'AdamWarlock',
-    1047: 'Jeff',
-    1048: 'Psylocke',
-    1049: 'Wolverine',
-    1050: 'InvisibleWoman',
-    1051: 'TheThing',
-    1052: 'IronFist',
-    1053: 'EmmaFrost'
-}
+from model import character_ids as char_id
 
 def parseHistory(data):
     '''
@@ -83,9 +42,9 @@ def parseMatch(data):
         'uids': [],
         'game_mode': data['game_mode']['game_mode_name'],
         'replay': data['replay_id'],
-        'mvp': data['mvp_uid'],
+        'mvp': int(data['mvp_uid']),
         'mvp_char': char_id[data['mvp_hero_id']],
-        'svp': data['svp_uid'],
+        'svp': int(data['svp_uid']),
         'svp_char': char_id[data['svp_hero_id']]
         }
     }
@@ -95,7 +54,7 @@ def parseMatch(data):
 
     for player in data['match_players']:
         parsed[data['match_uid']]['uids'].append(player['player_uid'])
-        temp = {player['player_uid']: {
+        temp = {int(player['player_uid']): {
 
             'handle': player['nick_name'],
             'team': player['camp'],

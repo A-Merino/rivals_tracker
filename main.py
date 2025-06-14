@@ -108,13 +108,9 @@ def saver(matches):
 
 
 
-def test():    
-    # print(gd.getHistory("172351051",utils.get_key()))
-    # print(gd.getMatch("5518698_1744684424_1170273_11001_11", utils.get_key()))
-    #gd.updateAccount("1139596293", utils.get_key())
-
-    response = requests.get('/'.join(("https://marvelrivalsapi.com/api/v2/player", "KingDerp_", "match-history?season=0&page=2")), headers=utils.get_key())
-    print(response.json()['pagination'])
+def test():
+    print(model.Player().heroes['Mantis'])
+    # utils.match_compiler()
 
 
 # test()
@@ -142,18 +138,22 @@ def loader():
     if old_data is None:
         old_data = utils.init_players(us)
 
+    # get matches
     matches = utils.get_all_matches()
 
+    # Go through each match
     for match in matches:
         with open(match, 'r') as f:
             data = json.load(f)
             f.close()
 
+        # Get match id
         mid = list(data.keys())[0]
 
         # for each player in the match
         for stats in data[mid]['players']:
-            cur_id = list(stats.keys())[0] 
+            # Get id from current player
+            cur_id = list(stats.keys())[0]
             
             # Check if its one of us
             if cur_id in uids:
@@ -165,6 +165,6 @@ def loader():
 
     utils.save_data(old_data)
 
-getAll()
+# getAll()
 # main()
-# loader()
+loader()

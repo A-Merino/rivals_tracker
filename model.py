@@ -4,51 +4,94 @@ import json
 import numpy as np
 
 
+character_ids = {
+    0: None,
+    1011: 'Hulk',
+    1014: 'Punisher',
+    1015: 'Storm',
+    1016: 'Loki',
+    1017: 'HumanTorch',
+    1018: 'DrStrange',
+    1020: 'Mantis',
+    1021: 'Hawkeye',
+    1022: 'CaptainAmerica',
+    1023: 'RocketRaccoon',
+    1024: 'Hela',
+    1025: 'CloakDagger',
+    1026: 'BlackPanther',
+    1027: 'Groot',
+    1028: 'Ultron',
+    1029: 'Magik',
+    1030: 'MoonKnight',
+    1031: 'LunaSnow',
+    1032: 'SquirrelGirl',
+    1033: 'BlackWidow',
+    1034: 'IronMan',
+    1035: 'Venom',
+    1036: 'SpiderMan',
+    1037: 'Magneto',
+    1038: 'ScarletWitch',
+    1039: 'Thor',
+    1040: 'MisterFantastic',
+    1041: 'WinterSoldier',
+    1042: 'PeniParker',
+    1043: 'StarLord',
+    1045: 'Namor',
+    1046: 'AdamWarlock',
+    1047: 'Jeff',
+    1048: 'Psylocke',
+    1049: 'Wolverine',
+    1050: 'InvisibleWoman',
+    1051: 'TheThing',
+    1052: 'IronFist',
+    1053: 'EmmaFrost'
+}
+
 
 class Player:
 
     def __init__(self, uid=None, user=None):
         self.uid = uid
         self.handle = user
-        self.heroes = { 'Mantis': Mantis(),
-                        'Jeff': Jeff(),
-                        'AdamWarlock': AdamWarlock(), 
-                        'CloakDagger': CloakDagger(),
-                        'InvisibleWoman': InvisibleWoman(),
-                        'Loki': Loki(),
-                        'LunaSnow': LunaSnow(),
-                        'RocketRaccoon': RocketRaccoon(),
-                        'Wolverine': Wolverine(),
-                        'WinterSoldier': WinterSoldier(),
-                        'Punisher': Punisher(),
-                        'Storm': Storm(),
-                        'StarLord': StarLord(),
-                        'SquirrelGirl': SquirrelGirl(),
-                        'SpiderMan': SpiderMan(),
-                        'ScarletWitch': ScarletWitch(),
-                        'Psylocke': Psylocke(),
-                        'Namor': Namor(),
-                        'MoonKnight': MoonKnight(),
-                        'MisterFantastic': MisterFantastic(),
-                        'Magik': Magik(),
-                        'IronMan': IronMan(),
-                        'IronFist': IronFist(),
-                        'HumanTorch': HumanTorch(),
-                        'Hela': Hela(),
-                        'Hawkeye': Hawkeye(),
-                        'BlackWidow': BlackWidow(),
-                        'BlackPanther': BlackPanther(),
-                        'Venom': Venom(),
-                        'Thor': Thor(),
-                        'TheThing': TheThing(),
-                        'PeniParker': PeniParker(),
-                        'Magneto': Magneto(),
-                        'Hulk': Hulk(),
-                        'Groot': Groot(),
-                        'EmmaFrost': EmmaFrost(),
-                        'DrStrange': DrStrange(),
-                        'CaptainAmerica': CaptainAmerica(),
-                        'Ultron': Ultron()
+        self.heroes = { 'Mantis': Hero('Mantis', "Support"),
+                        'Jeff': Hero('Jeff', "Support"),
+                        'AdamWarlock': Hero('Adam Warlock', "Support"), 
+                        'CloakDagger': Hero('Cloak Dagger', "Support"),
+                        'InvisibleWoman': Hero('Invisible Woman', "Support"),
+                        'Loki': Hero('Loki', "Support"),
+                        'LunaSnow': Hero('Luna Snow', "Support"),
+                        'RocketRaccoon': Hero('Rocket Raccoon', "Support"),
+                        'Ultron': Hero('Ultron', "Support"),
+                        'Wolverine': Hero('Wolverine', "Duelist"),
+                        'WinterSoldier': Hero('Winter Soldier', "Duelist"),
+                        'Punisher': Hero('Punisher', "Duelist"),
+                        'Storm': Hero('Storm', "Duelist"),
+                        'StarLord': Hero('Star-Lord', "Duelist"),
+                        'SquirrelGirl': Hero('Squirrel Girl', "Duelist"),
+                        'SpiderMan': Hero('Spider Man', "Duelist"),
+                        'ScarletWitch': Hero('Scarlet Witch', "Duelist"),
+                        'Psylocke': Hero('Psylocke', "Duelist"),
+                        'Namor': Hero('Namor', "Duelist"),
+                        'MoonKnight': Hero('Moon Knight', "Duelist"),
+                        'MisterFantastic': Hero('Mister Fantastic', "Duelist"),
+                        'Magik': Hero('Magik', "Duelist"),
+                        'IronMan': Hero('Iron Man', "Duelist"),
+                        'IronFist': Hero('Iron Fist', "Duelist"),
+                        'HumanTorch': Hero('Human Torch', "Duelist"),
+                        'Hela': Hero('Hela', "Duelist"),
+                        'Hawkeye': Hero('Hawkeye', "Duelist"),
+                        'BlackWidow': Hero('Black Widow', "Duelist"),
+                        'BlackPanther': Hero('Black Panther', "Duelist"),
+                        'Venom': Hero('Venom', "Vanguard"),
+                        'Thor': Hero('Thor', "Vanguard"),
+                        'TheThing': Hero('The Thing', "Vanguard"),
+                        'PeniParker': Hero('Peni Parker', "Vanguard"),
+                        'Magneto': Hero('Magneto', "Vanguard"),
+                        'Hulk': Hero('Hulk', "Vanguard"),
+                        'Groot': Hero('Groot', "Vanguard"),
+                        'EmmaFrost': Hero('Emma Frost', "Vanguard"),
+                        'DrStrange': Hero('Dr Strange', "Vanguard"),
+                        'CaptainAmerica': Hero('Captain America', "Vanguard")
                         }
         self.matches = []
         self.maps = {}
@@ -111,9 +154,9 @@ class Player:
 
 class Hero:
 
-    def __init__(self):
-        self.name = None
-        self.type = None
+    def __init__(self, nnn, ttt):
+        self.name = nnn
+        self.type = ttt
         self.damage = 0
         self.heals = 0
         self.taken = 0
@@ -126,6 +169,8 @@ class Hero:
         self.svps = 0
         self.matches = []
 
+    def __str__(self):
+        return str(self.name)
 
     def updateData(self, data, match_id, damage):
         if damage is not None:
@@ -181,284 +226,284 @@ class Hero:
 
 class Mantis(Hero):
 
-    def _init__(self):
-        super().__init__("Mantis")
+    def _init__(self, f, s):
         self.name = "Mantis"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 
 class Jeff(Hero):
 
     def _init__(self):
-        super().__init__("Jeff")
         self.name = "Jeff"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 
 class AdamWarlock(Hero):
 
     def _init__(self):
-        super().__init__("Adam Warlock")
         self.name = "Adam Warlock"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 
 class CloakDagger(Hero):
 
     def _init__(self):
-        super().__init__("Cloak & Dagger")
         self.name = "Cloak & Dagger"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 
 class InvisibleWoman(Hero):
 
     def _init__(self):
-        super().__init__("Invisible Woman")
         self.name = "Invisible Woman"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 class Loki(Hero):
 
     def _init__(self):
-        super().__init__("Loki")
         self.name = "Loki"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 class Ultron(Hero):
 
     def _init__(self):
-        super().__init__("Ultron")
         self.name = "Ultron"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 class LunaSnow(Hero):
 
     def _init__(self):
-        super().__init__("Luna Snow")
         self.name = "Luna Snow"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 class RocketRaccoon(Hero):
 
     def _init__(self):
-        super().__init__("Rocket Raccoon")
         self.name = "Rocket Raccoon"
         self.type = "Support"
+        super().__init__(self, self.name, self.type)
 
 class Wolverine(Hero):
 
     def _init__(self):
-        super().__init__("Wolverine")
         self.name = "Wolverine"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class WinterSoldier(Hero):
 
     def _init__(self):
-        super().__init__("Winter Soldier")
         self.name = "Winter Soldier"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Punisher(Hero):
 
     def _init__(self):
-        super().__init__("Punisher")
         self.name = "Punisher"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Storm(Hero):
 
     def _init__(self):
-        super().__init__("Storm")
         self.name = "Storm"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class StarLord(Hero):
 
     def _init__(self):
-        super().__init__("Star-Lord")
         self.name = "Star-Lord"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class SquirrelGirl(Hero):
 
     def _init__(self):
-        super().__init__("Squirrel Girl")
         self.name = "Squirrel Girl"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class SpiderMan(Hero):
 
     def _init__(self):
-        super().__init__("Spider-Man")
         self.name = "Spider-Man"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class ScarletWitch(Hero):
 
     def _init__(self):
-        super().__init__("Scarlet Witch")
         self.name = "Scarlet Witch"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Psylocke(Hero):
 
     def _init__(self):
-        super().__init__("Psylocke")
         self.name = "Psylocke"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Namor(Hero):
 
     def _init__(self):
-        super().__init__("Namor")
         self.name = "Namor"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class MoonKnight(Hero):
 
     def _init__(self):
-        super().__init__("Moon Knight")
         self.name = "Moon Knight"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class MisterFantastic(Hero):
 
     def _init__(self):
-        super().__init__("Mister Fantastic")
         self.name = "Mister Fantastic"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Magik(Hero):
 
     def _init__(self):
-        super().__init__("Magik")
         self.name = "Magik"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class IronMan(Hero):
 
     def _init__(self):
-        super().__init__("Iron Man")
         self.name = "Iron Man"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class IronFist(Hero):
 
     def _init__(self):
-        super().__init__("Iron Fist")
         self.name = "Iron Fist"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class HumanTorch(Hero):
 
     def _init__(self):
-        super().__init__("Human Torch")
         self.name = "Human Torch"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Hela(Hero):
 
     def _init__(self):
-        super().__init__("Hela")
         self.name = "Hela"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Hawkeye(Hero):
 
     def _init__(self):
-        super().__init__("Hawkeye")
         self.name = "Hawkeye"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class BlackWidow(Hero):
 
     def _init__(self):
-        super().__init__("Black Widow")
         self.name = "Black Widow"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class BlackPanther(Hero):
 
     def _init__(self):
-        super().__init__("Black Panther")
         self.name = "Black Panther"
         self.type = "Duelist"
+        super().__init__(self, self.name, self.type)
 
 class Jeff(Hero):
 
     def _init__(self):
-        super().__init__("Jeff")
         self.name = "Jeff"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class CaptainAmerica(Hero):
 
     def _init__(self):
-        super().__init__("Captain America")
         self.name = "Captain America"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class DrStrange(Hero):
 
     def _init__(self):
-        super().__init__("Doctor Strange")
         self.name = "Doctor Strange"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class EmmaFrost(Hero):
 
     def _init__(self):
-        super().__init__("Emma Frost")
         self.name = "Emma Frost"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class Groot(Hero):
 
     def _init__(self):
-        super().__init__("Groot")
         self.name = "Groot"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class Hulk(Hero):
 
     def _init__(self):
-        super().__init__("Hulk")
         self.name = "Hulk"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class Magneto(Hero):
 
     def _init__(self):
-        super().__init__("Magneto")
         self.name = "Magneto"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class PeniParker(Hero):
 
     def _init__(self):
-        super().__init__("Peni Parker")
         self.name = "Peni Parker"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class TheThing(Hero):
 
     def _init__(self):
-        super().__init__("The Thing")
         self.name = "The Thing"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class Thor(Hero):
 
     def _init__(self):
-        super().__init__("Thor")
         self.name = "Thor"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)
 
 class Venom(Hero):
 
     def _init__(self):
-        super().__init__("Venom")
         self.name = "Venom"
         self.type = "Vanguard"
+        super().__init__(self, self.name, self.type)

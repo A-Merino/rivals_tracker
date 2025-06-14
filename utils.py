@@ -116,7 +116,7 @@ def isAMatch(match_id):
     # List comprehension is pretty neat:
     #   - get all files
     #   - get rid of .json part
-    matches = [m.split('.')[0] for m in glob('./data/matches/*')]
+    matches = [m.split('\\')[-1].split('.')[0] for m in glob('./data/matches/*')]
 
     # If we already have match we don't need it again
     if match_id in matches:

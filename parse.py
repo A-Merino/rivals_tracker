@@ -42,9 +42,9 @@ def parseMatch(data):
         'uids': [],
         'game_mode': data['game_mode']['game_mode_name'],
         'replay': data['replay_id'],
-        'mvp': int(data['mvp_uid']),
+        'mvp': str(data['mvp_uid']),
         'mvp_char': char_id[data['mvp_hero_id']],
-        'svp': int(data['svp_uid']),
+        'svp': str(data['svp_uid']),
         'svp_char': char_id[data['svp_hero_id']]
         }
     }
@@ -54,7 +54,7 @@ def parseMatch(data):
 
     for player in data['match_players']:
         parsed[data['match_uid']]['uids'].append(player['player_uid'])
-        temp = {int(player['player_uid']): {
+        temp = {str(player['player_uid']): {
 
             'handle': player['nick_name'],
             'team': player['camp'],
@@ -71,7 +71,7 @@ def parseMatch(data):
 
         temp[player['player_uid']]['badges'] = []
         if player['badges'] is not None:
-            temp['badges'] = player['badges']
+            temp[player['player_uid']]['badges'] = player['badges']
 
         temp[player['player_uid']]['heroes'] = []
         for hero in player['player_heroes']:

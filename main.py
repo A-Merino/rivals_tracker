@@ -109,9 +109,9 @@ def saver(matches):
 
 
 def test():
-    print(model.Player().heroes['Mantis'])
+    # print(model.Player().heroes['Mantis'])
     # utils.match_compiler()
-
+    utils.save_match(gd.getMatch('6713347_1740250568_681_11001_10', utils.get_key()))
 
 # test()
 
@@ -167,4 +167,4 @@ def loader():
 
 # getAll()
 # main()
-loader()
+# loader()

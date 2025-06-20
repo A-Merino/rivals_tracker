@@ -254,13 +254,27 @@ def rewtir():
 
 
     data = load_matches(get_all_matches())
-    for m in data:
-        print(m)
-        
-        for b in m[list(m.keys())[0]]['players']:
-            uid = list(b.keys())[0]
-            b[int(uid)] = b[uid]
-            del b[uid]
-        # save_match(m)
+    for ma in data:
+        mat = ma[list(ma.keys())[0]]
+        ll = []
+        for u in mat['uids']:
+            ll.append(str(u))
 
-rewtir()
+        mat['uids'] = ll
+
+        mat['mvp'] = str(mat['mvp'])
+        mat['svp'] = str(mat['svp'])
+
+        m = mat['players']
+        for b in m:
+
+            uid = list(b.keys())
+            if len(uid) > 1:
+                bad = b['badges']
+                del b['badges']
+                uid = list(b.keys())[0]
+                b[uid]['badges'] = bad
+
+        save_match(ma)
+
+# rewtir()

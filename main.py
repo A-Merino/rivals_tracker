@@ -44,7 +44,7 @@ def main():
 
 
 def getAll():
-        # get our key and set header for api calls
+    # get our key and set header for api calls
     header = utils.get_key()
 
     # get uids and handles
@@ -55,7 +55,13 @@ def getAll():
     # Get already saved data
     old_data = utils.load_info()
     
-    seasons = ['0', '1.0', '1.5', '2.0', '2.5']
+    seasons = [
+        # '0'
+        # ,'1.0'
+        # ,'1.5'
+        '2.0'
+        # ,'2.5'
+    ]
 
     # if no files, then init new models
     if old_data is None:
@@ -104,6 +110,7 @@ def saver(matches):
         if match_data != 0:
             utils.save_match(match_data)
     loader()
+    utils.update_mvps()
             
 
 
@@ -164,6 +171,8 @@ def loader():
                     ps.updatePlayer(cur_player, stats, mid)
 
     utils.save_data(old_data)
+    utils.update_mvps()
+    utils.match_compiler()
 
 # getAll()
 # main()

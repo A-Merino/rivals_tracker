@@ -214,7 +214,7 @@ def update_mvps():
 
     Returns
     -------
-    None. Updates the 'players.json' file
+    None. Updates the 'players.json' files
     '''
 
     # Get matches and players
@@ -229,21 +229,40 @@ def update_mvps():
         # Why doesn't dict_keys return as list???
         match = match[list(match.keys())[0]]
 
-        # Save 
+        # Save uids of mvp and svp
         mvp = match['mvp']
         svp = match['svp']
 
+        char = None
+
+        # check if the mvp or svp is one of us
         if mvp in uids:
             char = match['mvp_char']
         elif svp in uids:
             char = match['svp_char']
         else:
             continue
-        print(char)
+
+        # Go through player objects
+        for player in players:
+            # if we find the player that matches
+            if player.uid == mvp:
+                player.heroes[char].mvps += 1
+                break
+            elif player.uid == svp:
+                player.heroes[char].svps += 1
+                break
+    save_data(players)
+
 # update_mvps()
+
+
+
+
 
 def rewtir():
 
+    # Incase I fuck it up
     # vv = None
 
     # with open ('all_matches.json', 'r') as file:

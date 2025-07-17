@@ -23,6 +23,7 @@ def main():
     # if no files, then init new models
     if old_data is None:
         old_data = utils.init_players(us)
+        
     
     # go through each of us and collect data
     for player in us:
@@ -59,8 +60,8 @@ def getAll():
         # '0'
         # ,'1.0'
         # ,'1.5'
-        '2.0'
-        # ,'2.5'
+        # ,'2.0'
+        '2.5'
     ]
 
     # if no files, then init new models
@@ -89,6 +90,7 @@ def getAll():
             minutes after completion to account for this and give some leeway
         '''
         gd.updateAccount(player['uid'], header)
+    loader()
 
 
 def saver(matches):
@@ -109,8 +111,6 @@ def saver(matches):
         # Save the match data to file if its a normal mode
         if match_data != 0:
             utils.save_match(match_data)
-    loader()
-    utils.update_mvps()
             
 
 
@@ -174,6 +174,6 @@ def loader():
     utils.update_mvps()
     utils.match_compiler()
 
-# getAll()
+getAll()
 # main()
 # loader()

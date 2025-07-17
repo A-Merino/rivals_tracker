@@ -44,7 +44,8 @@ character_ids = {
     1050: 'InvisibleWoman',
     1051: 'TheThing',
     1052: 'IronFist',
-    1053: 'EmmaFrost'
+    1053: 'EmmaFrost',
+    1054: 'Phoenix'
 }
 
 
@@ -82,6 +83,7 @@ class Player:
                         'Hawkeye': Hero('Hawkeye', "Duelist"),
                         'BlackWidow': Hero('Black Widow', "Duelist"),
                         'BlackPanther': Hero('Black Panther', "Duelist"),
+                        'Phoenix': Hero('Pheonix', "Duelist"),
                         'Venom': Hero('Venom', "Vanguard"),
                         'Thor': Hero('Thor', "Vanguard"),
                         'TheThing': Hero('The Thing', "Vanguard"),
